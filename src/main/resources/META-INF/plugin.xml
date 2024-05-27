@@ -41,18 +41,18 @@
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.xml</depends>
-    <depends>com.intellij.database</depends>
-    <depends>com.intellij.spring</depends>
+<!--    <depends>com.intellij.database</depends>-->
+<!--    <depends>com.intellij.spring</depends>-->
     <depends>com.intellij.java</depends>
 
-    <actions>
-        <action id="free-mabatis-generate-action"
-                class="com.tianlei.mybatis.action.MybatisGeneratorMainAction"
-                text="Mybatis-Generator"
-                description="Mybatis generator idea plugin">
-            <add-to-group group-id="DatabaseViewPopupMenu" anchor="first"/>
-        </action>
-    </actions>
+<!--    <actions>-->
+<!--        <action id="free-mabatis-generate-action"-->
+<!--                class="com.tianlei.mybatis.action.MybatisGeneratorMainAction"-->
+<!--                text="Mybatis-Generator"-->
+<!--                description="Mybatis generator idea plugin">-->
+<!--            <add-to-group group-id="DatabaseViewPopupMenu" anchor="first"/>-->
+<!--        </action>-->
+<!--    </actions>-->
     <extensions defaultExtensionNs="com.intellij">
         <dom.fileMetaData rootTagName="mapper" implementation="com.tianlei.mybatis.dom.description.MapperDescription"/>
         <dom.fileMetaData rootTagName="configuration"
@@ -63,7 +63,7 @@
         <projectService serviceImplementation="com.tianlei.mybatis.service.EditorService"/>
         <projectService serviceImplementation="com.tianlei.mybatis.alias.AliasFacade"/>
         <projectService serviceImplementation="com.tianlei.mybatis.locator.MapperLocator"/>
-        <projectService serviceImplementation="com.tianlei.mybatis.service.TableInfoService"/>
+<!--        <projectService serviceImplementation="com.tianlei.mybatis.service.TableInfoService"/>-->
         <codeInsight.lineMarkerProvider language="JAVA"
                                         implementationClass="com.tianlei.mybatis.provider.MapperLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="XML"
